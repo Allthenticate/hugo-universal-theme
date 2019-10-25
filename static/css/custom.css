@@ -10,24 +10,40 @@
 }
 
 
-
-
+.navbar-header > * {
+  vertical-align: middle;
+}
 .navbar-header {
-  padding-left:25px;
+  /* padding-left:25px;
   padding-top: 25px;
   font-weight:bold;
   float:left;
-  display:table;
+  display:table; */
 }
 
 .navbar-header a {
-  padding:0;
-  height:0;
   font-size:200%;
 }
 
+.home {
+  padding-top:8%;
+  font-weight:bold;
+}
+
+@media (max-width: 767px) {
+.visible-xs {
+    display: inline!important;
+}
+.home {
+  padding-top:5%;
+}
+}
+
 .navbar-brand img {
+  vertical-align: middle;
   height: 30px;
+  top:-3px;
+  position: relative;
   display: inline;
 }
 

@@ -1,18 +1,23 @@
 <footer id="footer">
     <div class="container">
 
+            {{ $current := . }}
+            {{ range .Site.Menus.main }}
+            {{ $topLevel := replace .URL "/" "" }}
+            {{ if .HasChildren }}
         <div class="col-md-4 col-sm-6 company_footer">
-            <h4>Company</h4>
-            <div class="item same-height-row clearfix">
-                <a href="/about">About Us</a>
-            </div>
-            <div class="item same-height-row clearfix">
-                <a href="/careers">Careers</a>
-            </div>
-
+                <h4>{{ .Name }} </h4>
+                {{ range .Children }}
+                <div class="item same-height-row clearfix">
+                    <a href="{{ .URL }}">{{ .Name }}</a>
+                </div>
+                {{ end }}
             <hr class="hidden-md hidden-lg hidden-sm">
 
         </div>
+            {{ end  }}
+            {{ end }}
+            
         <!-- /.col-md-4 -->
 
         <div class="col-md-4 col-sm-6">

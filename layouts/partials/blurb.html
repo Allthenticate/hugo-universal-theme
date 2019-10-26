@@ -1,11 +1,13 @@
 {{ if isset .Site.Params "blurb" }}
 {{ if .Site.Params.blurb.enable }}
-<section class="bar background-white">
+<section class="background-white">
     <div class="container">
-        <!-- <div class="heading text-center">
+        <div class="heading text-center">
             <h2>{{ .Site.Params.blurb.title }}</h2>
-        </div> -->
-        {{ .Site.Params.blurb.content }}
+        </div>
+        <div class="descriptionDiv">
+        {{ .Site.Params.blurb.content | markdownify }}
+        </div>
     </div>
 </section>
 {{ end }}

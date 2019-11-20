@@ -28,7 +28,7 @@
                             <div class="row">
                                 <div class="col-md-4">
                                   <div class="image">
-                                      <a href="{{ .Params.link }}">
+                                      <a href="{{ .Params.link }}" target="_blank">
                                           {{ if .Params.banner }}
                                           <img src="{{ .Site.BaseURL}}{{ .Params.banner }}" class="img-responsive" alt="">
                                           {{ else }}
@@ -38,7 +38,7 @@
                                   </div>
                                 </div>
                                 <div class="col-md-8">
-                                    <h2><a href="{{ .Params.link }}">{{ .Title }}</a></h2>
+                                    <h2><a href="{{ .Params.link }}" target="_blank">{{ .Title }}</a></h2>
                                     <div class="clearfix">
                                         <p class="author-category">
                                           {{ if isset .Params "author" }}
@@ -52,7 +52,7 @@
 
                                         </p>
                                         <p class="date-comments">
-                                            <a href="{{ .Params.link }}"><i class="fa fa-calendar-o"></i> {{ .Date.Format .Site.Params.date_format }}</a>
+                                            <a href="{{ .Params.link }}" target="_blank"><i class="fa fa-calendar-o"></i> {{ .Date.Format .Site.Params.date_format }}</a>
                                         </p>
                                     </div>
                                     <p class="intro">{{ .Summary }}</p>
